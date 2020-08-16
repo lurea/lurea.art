@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,39 +8,78 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize.css">
 
 
 </head>
 <body>
+<!-- Dropdown Structure -->
 
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="#!" class="brand-logo">Lurea.art</a>
+      <ul class="right">
+        <li>
+          <a class="dropdown-trigger" href="#!" data-target="dropdown1">Proyectos<i class="material-icons right">arrow_drop_down</i></a>
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Lucia-personajes2020</a></li>
+            <li><a href="#!">Nerea-guerreras</a></li>
           </ul>
-        </div>
-      </nav>
-    
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        </li>
       </ul>
-                
+    </div>
+  </nav>    
+</div>
+
+<div class="parallax-container">
+  <div class="parallax"><img src="proyectos/Lucia-personajes2020/Marceline/Marceline.jpg"></div>
+  
+</div>
+<div class="section white">
+  <div class="row container">
+    <div class="col s12 m10 offset-m1">
+      <h2 class="header">Lucia: Personajes 2020</h2>
+      <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam asperiores nesciunt numquam nostrum molestias fugit nisi! Cum optio esse et id ea eveniet. Expedita dolor vitae in dolorem eum voluptatem.</p>
+
+      <a href="" class="waves-effect waves-light btn">Ver Proyecto</a>
+    </div>
+  </div>
+</div>
+
+<div class="parallax-container">
+  <div class="parallax"><img src="proyectos/Nerea-Guerreras/Paleta_102/paleta 102.jpg"></div>
+  
+</div>
+<div class="section white">
+  <div class="row container">
+    <div class="col s12 m10 offset-m1">
+      <h2 class="header">Nerea: Guerreras</h2>
+      <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam asperiores nesciunt numquam nostrum molestias fugit nisi! Cum optio esse et id ea eveniet. Expedita dolor vitae in dolorem eum voluptatem.</p>
+
+      <a href="" class="waves-effect waves-light btn">Ver Proyecto</a>
+    </div>
+  </div>
+</div>
 
 
 
 
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/materialize.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems,{
+          constrainWidth:false,
+          coverTrigger:false,
+        });
+        var elems = document.querySelectorAll('.parallax');
+        var instances = M.Parallax.init(elems);
+      });
+    </script>
     
 
 </body>
